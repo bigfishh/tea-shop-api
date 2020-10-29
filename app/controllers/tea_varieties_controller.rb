@@ -1,0 +1,2 @@
+class TeaVarietiesController < ApplicationController
+end

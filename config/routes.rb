@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
-  resources :cart_teas
-  resources :teas
-  resources :carts
-  resources :users
-  resources :tea_varieties
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  get '/teas', to: 'teas#index'
+  get '/tea_varieties', to: 'tea_varieties#index'
+
+  get '/users/:id', to: 'users#show'
+  get '/login', to: 'users#login'
+  get '/keep_logged_in', to: 'users#keep_logged_in'
 end

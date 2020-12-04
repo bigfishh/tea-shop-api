@@ -3,7 +3,7 @@ class CreateCarts < ActiveRecord::Migration[6.0]
     create_table :carts do |t|
       t.integer :total
       t.belongs_to :user, null: false, foreign_key: true
-      t.boolean :checked_out
+      t.boolean :checked_out, default: false
 
       t.timestamps
     end

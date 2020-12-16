@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   get '/tea_varieties', to: 'tea_varieties#index'
 
   get '/users/:id', to: 'users#show'
-  get '/login', to: 'users#login'
+  post '/login', to: 'users#login'
   get '/keep_logged_in', to: 'users#keep_logged_in'
 end

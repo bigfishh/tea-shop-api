@@ -15,7 +15,8 @@ class UsersController < ApplicationController
     # LOGGING IN
     def login 
         user = User.find_by(email_address: params[:email_address])
-        if user && user.authenticate(params[:email_address])
+        byebug
+        if user && user.authenticate(params[:password])
             wristband = encode_token({user_id: user.id})
             render json: {user: UserSerializer.new(user), token: wristband}
         else 

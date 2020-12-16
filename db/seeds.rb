@@ -51,11 +51,11 @@ current_cart = Cart.create(user: annie, checked_out: false)
 past_cart = Cart.create(user: annie, checked_out: true)
 past_cart2 = Cart.create(user: annie, checked_out: true)
 
-3.times do 
-    CartTea.create(cart: current_cart, tea: Tea.all.sample)
+3.times do |i|
+    CartTea.create(cart: current_cart, quantity: "#{i+1}", tea: Tea.all.sample)
 end
 
-2.times do 
-    CartTea.create(cart: past_cart, tea: Tea.all.sample)
-    CartTea.create(cart: past_cart2, tea: Tea.all.sample)
+2.times do |i|
+    CartTea.create(cart: past_cart, quantity: "#{i+1}", tea: Tea.all.sample)
+    CartTea.create(cart: past_cart2, quantity: "#{i+1}", tea: Tea.all.sample)
 end

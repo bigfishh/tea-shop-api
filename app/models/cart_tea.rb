@@ -13,4 +13,8 @@ class CartTea < ApplicationRecord
     self.tea.name
   end
 
+  def tea_id
+    self.tea.id
+  end
+
 end

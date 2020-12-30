@@ -1,3 +1,3 @@
 class TeaVariety < ApplicationRecord
-    has_many :teas
+    has_many :teas, dependent: :destroy
 end

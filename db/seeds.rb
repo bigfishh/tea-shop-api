@@ -1,6 +1,6 @@
 User.destroy_all
-TeaVariety.destroy_all
 Tea.destroy_all
+TeaVariety.destroy_all
 Cart.destroy_all
 CartTea.destroy_all
 

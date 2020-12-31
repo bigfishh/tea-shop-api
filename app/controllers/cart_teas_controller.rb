@@ -4,7 +4,7 @@ class CartTeasController < ApplicationController
         found_cart = Cart.find(params[:cart_id])
         if found_cart.cart_teas.pluck(:tea_id).include?(params[:tea_id])
             found_cart_tea = found_cart.cart_teas.find_by(tea_id: params[:tea_id])
-            found_cart_tea.update(quantity: found_cart_tea.quantity + 1)
+            found_cart_tea.update(quantity: params[:quantity])
             render json: found_cart_tea
         else 
             new_cart_tea = CartTea.create(cart_tea_params)

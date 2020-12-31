@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/keep_logged_in', to: 'users#keep_logged_in'
 
   post '/cart_teas', to: 'cart_teas#create'
+  post '/cart_teas/:id', to: 'cart_teas#create'
 
   patch '/carts/:id/checkout', to: 'carts#update'
 end

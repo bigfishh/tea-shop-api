@@ -11,7 +11,7 @@ Tea.reset_pk_sequence
 Cart.reset_pk_sequence
 CartTea.reset_pk_sequence
 
-annie = User.create(first_name: "Annie", last_name: "Zheng", password:"123", email_address: "annie@irohstea.com")
+annie = User.create(first_name: "Annie", last_name: "Zheng", password:"123", email_address: "annie")
 
 black_tea = TeaVariety.create(name: "Black Tea", description: "The process for making black tea is defined by allowing the leaf to fully oxidize during production (which means water evaporates out of the leaf and the leaf absorbs more oxygen from the air). The results are the characteristic dark brown and black leaf with typically more robust and pronounced flavors.", image: "https://cdn.shopify.com/s/files/1/0888/8900/files/1_3aa1df20-8fcb-4c55-ad56-27f77f7988c6.png?v=1585323689")
 green_tea = TeaVariety.create(name: "Green Tea", description: "All tea starts out green. The green tea process is defined by preventing oxidation. Shortly after picking, the leaves are “fired” (rapid heating) to arrest oxidation and keep the leaf “green” for the duration of production. Green teas are typically steeped for shorter amounts of time and at lower temperatures which will produce a lighter cup with less caffeine.", image: "https://cdn.shopify.com/s/files/1/0888/8900/files/4.png?v=1585323765")

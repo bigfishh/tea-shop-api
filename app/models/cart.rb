@@ -7,7 +7,7 @@ class Cart < ApplicationRecord
   def cart_total 
     total = 0 
     self.cart_teas.each do |cart_tea|
-      total = total + (cart_tea.item_total * cart_tea.quantity)
+      total = total + cart_tea.item_total
     end
     total
   end
